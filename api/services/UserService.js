@@ -3,7 +3,7 @@ const Services = require('./Services')
 
 class UserServices extends Services {
     constructor(){
-        super('users')
+        super('Users')
     }
     //métodos especificos do controlador de Herois
 }
