@@ -9,6 +9,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      notaFiscal: {
+        type:Sequelize.STRING
+      },
+      cpf_cnpj: {
+        type: Sequelize.STRING
+      },
       descricao: {
         type: Sequelize.STRING
       },
