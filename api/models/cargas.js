@@ -13,10 +13,16 @@ module.exports = (sequelize, DataTypes) => {
     notaFiscal: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        is: /^[0-9]{6,8}$/i,
+      }
     },
     cpf_cnpj: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        is: /^[0-9]{11}$|^[0-9]{14}$/i,
+      }
     },
     descricao: {
       type: DataTypes.STRING,
