@@ -29,7 +29,16 @@ module.exports = {
                 expiresIn: JWT_EXPIRATION_TIME,
             });
 
-            res.json({ token });
+            res.status(200).json({
+                message: 'Autenticação bem-sucedida!',
+                user: {
+                  id: user.id,
+                  name: user.name,
+                  email: user.email,
+                  role: user.role
+                },
+                token: token
+              });
         } catch (err) {
             console.error(err);
             return res.status(500).json({ message: 'Erro interno do servidor.' });

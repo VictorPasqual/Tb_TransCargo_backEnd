@@ -9,8 +9,10 @@ module.exports = {
         cpf_cnpj: '55342236851',
         descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         peso: 100,
-        origem: '-20.493560, -47.416729',
-        destino: '-20.569439, -47.382785',
+        origemLat: '-20.493560',
+        origemLng: '-47.416729',
+        destinoLat: '-20.569439',
+        destinoLng: '-47.382785',
         caminhaoId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
