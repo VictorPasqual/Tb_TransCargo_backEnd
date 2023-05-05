@@ -32,17 +32,46 @@ module.exports = {
             res.status(200).json({
                 message: 'Autenticação bem-sucedida!',
                 user: {
-                  id: user.id,
-                  name: user.name,
-                  email: user.email,
-                  role: user.role
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    role: user.role
                 },
                 token: token
-              });
+            });
         } catch (err) {
             console.error(err);
             return res.status(500).json({ message: 'Erro interno do servidor.' });
         }
     },
+    async getUserData(req, res) {
+        console.log('TESTE')
+        console.log(req.headers.authorization)
+        console.log(req.headers)
 
+        const token = req.headers.authorization
+        console.log(token)
+        try {
+            // Decodifica o token e extrai as informações do usuário
+            const decodedToken = jwt.verify(token, JWT_SECRET);
+
+            console.log(decodedToken)
+            console.log(token)
+            const userId = decodedToken.id;
+
+            const userData = await Users.findByPk(userId);
+
+            res.status(200).json({
+                user: {
+                    id: userData.id,
+                    name: userData.name,
+                    email: userData.email,
+                    role: userData.role,
+                },
+            });
+        } catch (err) {
+            console.error(err);
+            return res.status(401).json({ message: 'Token inválido.' });
+        }
+    },
 };
