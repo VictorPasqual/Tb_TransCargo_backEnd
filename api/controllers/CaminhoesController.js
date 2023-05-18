@@ -1,7 +1,6 @@
 const { CaminhoesServices } = require('../services')
 const caminhoesServices = new CaminhoesServices()
 
-
 class CaminhoesController {
 
     static async readAllTrucks(req, res) {
