@@ -9,10 +9,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      origem: {
+      origemCEP: {
         type: Sequelize.STRING
       },
-      destino: {
+      destinoCEP: {
         type: Sequelize.STRING
       },
       distancia: {

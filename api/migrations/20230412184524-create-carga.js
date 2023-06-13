@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       notaFiscal: {
-        type:Sequelize.STRING
+        type: Sequelize.STRING
       },
       cpf_cnpj: {
         type: Sequelize.STRING
@@ -21,10 +21,16 @@ module.exports = {
       peso: {
         type: Sequelize.FLOAT
       },
-      origem: {
+      origemLat: {
         type: Sequelize.STRING
       },
-      destino: {
+      origemLng: {
+        type: Sequelize.STRING
+      },
+      destinoLat: {
+        type: Sequelize.STRING
+      },
+      destinoLng: {
         type: Sequelize.STRING
       },
       caminhao: {

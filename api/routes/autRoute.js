@@ -8,6 +8,7 @@ router.get('/trucks/:owner/user', authController.getTrucksByOwner)
 router.get('/trucks/:caminhaoId/cargas', authController.getCargasDoCaminhao)
 router.post('/auth', authController.authenticate);
 router.post('/authAdmin', authController.authenticateAdmin);
+router.post('/validateEmail', authController.validateEmail);
 
 module.exports = router;
 
