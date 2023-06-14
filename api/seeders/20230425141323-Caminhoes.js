@@ -11,6 +11,14 @@ module.exports = {
         owner: 1,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        placa: 'HRT-0209',
+        marca: 'Ford',
+        modelo: 'CARGO',
+        owner: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },

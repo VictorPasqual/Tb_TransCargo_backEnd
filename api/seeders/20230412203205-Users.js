@@ -8,8 +8,26 @@ module.exports = {
         name: 'Victor',
         email: 'victor@example.com',
         cpfCnpj: '98819815060',
-        password: '0123456',
+        password: '01234567',
         role: 'admin',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Lucas',
+        email: 'lucas@example.com',
+        cpfCnpj: '98819815060',
+        password: '01234567',
+        role: 'motorista',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'Vinicius',
+        email: 'vinicim@example.com',
+        cpfCnpj: '98819815060',
+        password: '01234567',
+        role: 'cliente',
         createdAt: new Date(),
         updatedAt: new Date()
       }

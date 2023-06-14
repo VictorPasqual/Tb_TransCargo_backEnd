@@ -11,4 +11,3 @@ router.post('/authAdmin', authController.authenticateAdmin);
 router.post('/validateEmail', authController.validateEmail);
 
 module.exports = router;
-
